@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.PresentationLayer", "Bank.PresentationLayer\Bank.PresentationLayer.csproj", "{0A93B864-8FB8-4248-AE09-A7D2FC2E2EDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanivBank.Entities", "YanivBank.Entities\YanivBank.Entities.csproj", "{627169D5-CC8C-4E13-BF5B-C2BF5ED6A165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanivBank.DataAccessLayer", "YanivBank.DataAccessLayer\YanivBank.DataAccessLayer.csproj", "{39B75A1F-F68F-47E9-A2AA-A07A3105A8A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanivBank.BusinessLogicLayer", "YanivBank.BusinessLogicLayer\YanivBank.BusinessLogicLayer.csproj", "{B404A94F-0654-4C5F-A2C0-59CAB2AF6912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanivBank.Configuration", "YanivBank.Configuration\YanivBank.Configuration.csproj", "{EB01BBC8-E3AA-4898-A143-2FA643008BFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanivBank.Exceptions", "YanivBank.Exceptions\YanivBank.Exceptions.csproj", "{C7096CCE-F964-4F3B-BC66-15911CDA8223}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A93B864-8FB8-4248-AE09-A7D2FC2E2EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A93B864-8FB8-4248-AE09-A7D2FC2E2EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A93B864-8FB8-4248-AE09-A7D2FC2E2EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A93B864-8FB8-4248-AE09-A7D2FC2E2EDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{627169D5-CC8C-4E13-BF5B-C2BF5ED6A165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{627169D5-CC8C-4E13-BF5B-C2BF5ED6A165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{627169D5-CC8C-4E13-BF5B-C2BF5ED6A165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{627169D5-CC8C-4E13-BF5B-C2BF5ED6A165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39B75A1F-F68F-47E9-A2AA-A07A3105A8A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39B75A1F-F68F-47E9-A2AA-A07A3105A8A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39B75A1F-F68F-47E9-A2AA-A07A3105A8A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39B75A1F-F68F-47E9-A2AA-A07A3105A8A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B404A94F-0654-4C5F-A2C0-59CAB2AF6912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B404A94F-0654-4C5F-A2C0-59CAB2AF6912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B404A94F-0654-4C5F-A2C0-59CAB2AF6912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B404A94F-0654-4C5F-A2C0-59CAB2AF6912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB01BBC8-E3AA-4898-A143-2FA643008BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB01BBC8-E3AA-4898-A143-2FA643008BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB01BBC8-E3AA-4898-A143-2FA643008BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB01BBC8-E3AA-4898-A143-2FA643008BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7096CCE-F964-4F3B-BC66-15911CDA8223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7096CCE-F964-4F3B-BC66-15911CDA8223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7096CCE-F964-4F3B-BC66-15911CDA8223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7096CCE-F964-4F3B-BC66-15911CDA8223}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {935752E5-2E60-4000-B42B-83ACAE4C7A46}
+	EndGlobalSection
+EndGlobal

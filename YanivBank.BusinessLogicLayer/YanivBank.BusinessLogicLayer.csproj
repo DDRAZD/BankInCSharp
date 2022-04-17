@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B404A94F-0654-4C5F-A2C0-59CAB2AF6912}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YanivBank.BusinessLogicLayer</RootNamespace>
+    <AssemblyName>YanivBank.BusinessLogicLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BALContracts\ICustomerBusinessLogicLayer.cs" />
+    <Compile Include="CustomersBusinessLogicLayer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YanivBank.Configuration\YanivBank.Configuration.csproj">
+      <Project>{eb01bbc8-e3aa-4898-a143-2fa643008bfe}</Project>
+      <Name>YanivBank.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanivBank.DataAccessLayer\YanivBank.DataAccessLayer.csproj">
+      <Project>{39b75a1f-f68f-47e9-a2aa-a07a3105a8a0}</Project>
+      <Name>YanivBank.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanivBank.Entities\YanivBank.Entities.csproj">
+      <Project>{627169d5-cc8c-4e13-bf5b-c2bf5ed6a165}</Project>
+      <Name>YanivBank.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanivBank.Exceptions\YanivBank.Exceptions.csproj">
+      <Project>{c7096cce-f964-4f3b-bc66-15911cda8223}</Project>
+      <Name>YanivBank.Exceptions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
