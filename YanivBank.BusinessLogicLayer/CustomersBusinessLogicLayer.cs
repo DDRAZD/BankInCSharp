@@ -105,7 +105,7 @@ namespace YanivBank.BusinessLogicLayer
 
                 long maxCustCode = 0;
 
-                foreach(Customer item in allCustomers)
+                foreach(Customer item in allCustomers)//have to do this like that and not with count as customers might be removed and we never decrease the actual counter of the ID
                 {
                     if(item.CustomerCode>maxCustCode)
                     {
