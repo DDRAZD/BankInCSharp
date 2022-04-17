@@ -4,14 +4,15 @@ using YanivBank.Exceptions;
 using YanivBank.Entities;
 
 
-namespace YanivBank.DataAccessLayer.DALContracts
+
+
+namespace YanivBank.BusinessLogicLayer.BALContracts
 {
     /// <summary>
-    /// this interface allows to do CRUD operations on accounts data collection; similar to account DB
+    /// provides the interface for the businsss logic layer for accounts
     /// </summary>
-     public interface IAccountDataAccessLayer
+     public interface IAccountBusinessLogicLayer
     {
-
         /// <summary>
         /// pulls from "DB" all the accounts
         /// </summary>
@@ -34,26 +35,24 @@ namespace YanivBank.DataAccessLayer.DALContracts
         bool CloseAccount(long accountId);
 
         /// <summary>
-        /// opens an account with list of owners; receives from BAL a unique ID to implement as account ID
+        /// opens an account with list of owners; creates the unique account ID
         /// </summary>
-        /// <param name="customerList">list of customers to be owners</param>
-        /// <param name="UniqueID"> a unique ID to make as account ID</param>
+        /// <param name="customerList">list of customers to be owners</param>        
         /// <returns>true if was able to open the account</returns>
-        bool OpenAccount(List<Customer> customerList, long UniqueID);
+        bool OpenAccount(List<Customer> customerList);
 
         /// <summary>
-        /// opens an account with list of owners; receives from BAL a unique ID to implement as account ID
+        /// opens an account with list of owners; creates the unique account ID
         /// </summary>
-        /// <param name="customerList">list of customers to be owners</param>
-        /// <param name="UniqueID"> a unique ID to make as account ID</param>
+        /// <param name="customerList">list of customers to be owners</param>      
         /// <returns>true if was able to open the account</returns>
-        bool OpenAccount(Customer customer, long UniqueID);
+        bool OpenAccount(Customer customer);
 
         /// <summary>
         /// adds another customer owner to the account
         /// </summary>
         /// <param name="customer">the owner to be added</param>
-        
+
         void AddOwner(Customer customer, long accountID);
 
         /// <summary>
@@ -63,9 +62,11 @@ namespace YanivBank.DataAccessLayer.DALContracts
         /// <returns>returns true if removed, if could not remove (e.g. would have left account without owner) returns false</returns>
         bool RemoveOwner(Customer customer, long accountID);
 
-
-
-
+        /// <summary>
+        /// generates account ID for the open accounts methods
+        /// </summary>
+        /// <returns>unique account ID</returns>
+        long AccountIDGenerator();
 
     }
 }

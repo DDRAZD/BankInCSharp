@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountsBusinessLogicLayer.cs" />
+    <Compile Include="BALContracts\IAccountBusinessLogicLayer.cs" />
     <Compile Include="BALContracts\ICustomerBusinessLogicLayer.cs" />
     <Compile Include="CustomersBusinessLogicLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
