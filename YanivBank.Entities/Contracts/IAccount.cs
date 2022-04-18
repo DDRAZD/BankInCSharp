@@ -7,7 +7,7 @@ namespace YanivBank.Entities.Contracts
     /// <summary>
     /// represents interface of an account
     /// </summary>
-     interface IAccount
+    public interface IAccount
     {
         #region Properties
          List<Customer> AccountOwnerList { get; set; }
