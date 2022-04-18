@@ -12,6 +12,8 @@ class Program
         string userName = null;
         string password = null;
 
+        
+
         System.Console.Write("Username: ");
         //read login
         userName = System.Console.ReadLine();
@@ -73,7 +75,6 @@ class Program
             System.Console.WriteLine("1. Add Customer");
             System.Console.WriteLine("2. Delete Customer");
             System.Console.WriteLine("3. Update Customer");
-            System.Console.WriteLine("4. Search Customer");
             System.Console.WriteLine("5. View Customer");
             System.Console.WriteLine("0. Bank to Main menue");
 
@@ -96,6 +97,7 @@ class Program
     static void AccountsMenu()
     {
         int AccountMenuChoice = -1;
+        
         //do loop starts
         do
         {
@@ -109,6 +111,14 @@ class Program
 
             System.Console.Write("Enter Choice: ");
             AccountMenuChoice = System.Convert.ToInt32(System.Console.ReadLine());
+
+
+            switch (AccountMenuChoice)
+            {
+                case 1: AccountPresntations.AddAccount(); break;
+                case 2: AccountPresntations.DeleteAccount(); break;
+            }
+
         } while (AccountMenuChoice != 0);
 
     }

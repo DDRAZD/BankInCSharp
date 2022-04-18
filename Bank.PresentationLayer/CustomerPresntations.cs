@@ -7,6 +7,9 @@ using YanivBank.BusinessLogicLayer.BLContracts;
 
 namespace YanivBank.PresentationLayer
 {
+    /// <summary>
+    /// static class that represents the customer presentation; no need to instanciate it as static
+    /// </summary>
     static class CustomerPresntations
     {
 
@@ -42,7 +45,7 @@ namespace YanivBank.PresentationLayer
               List<Customer> matchingCustomer = customerBusinessLogicLayer.GetCustomerByCondition(item=>item.CustomerID == newGUid);
                 if (matchingCustomer.Count > 0)
                 {
-                    Console.WriteLine("New Customer COde " +matchingCustomer[0].CustomerCode);
+                    Console.WriteLine("New Customer Code " +matchingCustomer[0].CustomerCode);
                 }
                 else
                 {

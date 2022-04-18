@@ -238,23 +238,26 @@ namespace YanivBank.BusinessLogicLayer
                 List<Accounts> allAccounts = AccountDataAccessLayer.GetACcounts();
 
                 long maxAccountCode = 0;
-                long accountIDtoUse = 0;
+                long accountIDtoUse = YanivBank.Configuration.Settings.BasicAccountNumber;
 
-                foreach (Accounts item in allAccounts)//have to do this like that and not with count as accounts might be removed and we never decrease the actual counter of the ID
+                if(allAccounts != null)
                 {
-                    if (item.AccountId > maxAccountCode)
+                    foreach (Accounts item in allAccounts)//have to do this like that and not with count as accounts might be removed and we never decrease the actual counter of the ID
                     {
-                        maxAccountCode = item.AccountId;
+                        if (item.AccountId > maxAccountCode)
+                        {
+                            maxAccountCode = item.AccountId;
+                        }
                     }
-                }
-                //genereate account number
-                if (allAccounts.Count >= 1)
-                {
-                    accountIDtoUse = maxAccountCode + 1;
-                }
-                else
-                {
-                    accountIDtoUse = YanivBank.Configuration.Settings.BasicAccountNumber + 1;
+                    if (allAccounts.Count >= 1)
+                    {
+                        accountIDtoUse = maxAccountCode + 1;
+                    }
+                    else
+                    {
+                        accountIDtoUse = YanivBank.Configuration.Settings.BasicAccountNumber + 1;
+                    }
+                                
                 }
                 return accountIDtoUse;
 

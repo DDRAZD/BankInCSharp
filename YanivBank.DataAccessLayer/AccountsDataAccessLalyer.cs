@@ -17,6 +17,15 @@ namespace YanivBank.DataAccessLayer
 
         #endregion
 
+        #region Constructor
+        static AccountsDataAccessLalyer()
+        {
+            _accounts = new List<Accounts>();
+        }         
+
+
+        #endregion
+
         #region Properties
 
         private static List<Accounts> Accounts {
@@ -41,6 +50,7 @@ namespace YanivBank.DataAccessLayer
 
             try
             {
+                if (Accounts == null) throw new AccountException("there are no existing accounts");
 
                List<Accounts> accountList= Accounts.FindAll(item=>item.AccountId == accountID);
                 if (accountList != null)
@@ -74,6 +84,7 @@ namespace YanivBank.DataAccessLayer
 
             try
             {
+                if(Accounts==null) return false;
                 if ((Accounts.RemoveAll(item => item.AccountId == accountId) > 0))
                     return true;
                 else
@@ -102,8 +113,13 @@ namespace YanivBank.DataAccessLayer
                 //we dont just return Accounts as that is private and we are separting the layers; we will create a copy (here the clone is actully used)
 
                 List<Accounts> accountList = new List<Accounts>();
+                //accountList = null;
                 //we dont just add, we need to clone
-                Accounts.ForEach(item => accountList.Add(item.Clone() as Accounts));
+                if(Accounts != null)
+                {
+                    Accounts.ForEach(item => accountList.Add(item.Clone() as Accounts));
+                }
+                        
 
                 return accountList;
             }
@@ -168,6 +184,7 @@ namespace YanivBank.DataAccessLayer
                 if (UniqueID > 0)
                 {
                     account.AccountId = UniqueID;
+                    Accounts.Add(account);
                     return true;
                 }
                 else
