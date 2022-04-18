@@ -38,16 +38,16 @@ namespace YanivBank.DataAccessLayer.DALContracts
         /// </summary>
         /// <param name="customerList">list of customers to be owners</param>
         /// <param name="UniqueID"> a unique ID to make as account ID</param>
-        /// <returns>true if was able to open the account</returns>
-        bool OpenAccount(List<Customer> customerList, long UniqueID);
+        /// <returns>account number opened; -1 if did not work</returns>
+        long OpenAccount(List<Customer> customerList, long UniqueID);
 
         /// <summary>
         /// opens an account with list of owners; receives from BAL a unique ID to implement as account ID
         /// </summary>
         /// <param name="customerList">list of customers to be owners</param>
         /// <param name="UniqueID"> a unique ID to make as account ID</param>
-        /// <returns>true if was able to open the account</returns>
-        bool OpenAccount(Customer customer, long UniqueID);
+        /// <returns>account number opened; -1 if did not work</returns>
+        long OpenAccount(Customer customer, long UniqueID);
 
         /// <summary>
         /// adds another customer owner to the account

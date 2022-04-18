@@ -171,8 +171,8 @@ namespace YanivBank.DataAccessLayer
         /// </summary>
         /// <param name="customerList">list of customers to be owners</param>
         /// <param name="UniqueID"> a unique ID to make as account ID</param>
-        /// <returns>true if was able to open the account</returns>
-        public bool OpenAccount(List<Customer> customerList, long UniqueID)
+        /// <returns>account number opened; -1 if did not work</returns>
+        public long OpenAccount(List<Customer> customerList, long UniqueID)
         {
 
             try
@@ -185,7 +185,7 @@ namespace YanivBank.DataAccessLayer
                 {
                     account.AccountId = UniqueID;
                     Accounts.Add(account);
-                    return true;
+                    return UniqueID;
                 }
                 else
                 {
@@ -204,8 +204,8 @@ namespace YanivBank.DataAccessLayer
         /// </summary>
         /// <param name="customerList">list of customers to be owners</param>
         /// <param name="UniqueID"> a unique ID to make as account ID</param>
-        /// <returns>true if was able to open the account</returns>
-        public bool OpenAccount(Customer customer, long UniqueID)
+        /// <returns>account number opened; -1 if did not work</returns>
+        public long OpenAccount(Customer customer, long UniqueID)
         {
 
             try
@@ -217,7 +217,7 @@ namespace YanivBank.DataAccessLayer
                 if (UniqueID > 0)
                 {
                     account.AccountId = UniqueID;
-                    return true;
+                    return UniqueID;
                 }
                 else
                 {

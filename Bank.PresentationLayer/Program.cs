@@ -117,6 +117,9 @@ class Program
             {
                 case 1: AccountPresntations.AddAccount(); break;
                 case 2: AccountPresntations.DeleteAccount(); break;
+                case 3: AccountPresntations.UpdateAccount(); break;
+                case 4: AccountPresntations.ViewAccount(); break;
+               
             }
 
         } while (AccountMenuChoice != 0);

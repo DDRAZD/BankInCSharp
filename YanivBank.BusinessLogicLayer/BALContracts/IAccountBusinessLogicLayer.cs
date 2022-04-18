@@ -38,15 +38,15 @@ namespace YanivBank.BusinessLogicLayer.BALContracts
         /// opens an account with list of owners; creates the unique account ID
         /// </summary>
         /// <param name="customerList">list of customers to be owners</param>        
-        /// <returns>true if was able to open the account</returns>
-        bool OpenAccount(List<Customer> customerList);
+        //// <returns>account number opened; -1 if did not work</returns>
+        long OpenAccount(List<Customer> customerList);
 
         /// <summary>
         /// opens an account with list of owners; creates the unique account ID
         /// </summary>
         /// <param name="customerList">list of customers to be owners</param>      
-        /// <returns>true if was able to open the account</returns>
-        bool OpenAccount(Customer customer);
+        /// <returns>account number opened; -1 if did not work</returns>
+        long OpenAccount(Customer customer);
 
         /// <summary>
         /// adds another customer owner to the account

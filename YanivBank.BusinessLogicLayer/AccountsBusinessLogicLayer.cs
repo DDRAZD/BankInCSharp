@@ -123,8 +123,8 @@ namespace YanivBank.BusinessLogicLayer
         /// opens an account with list of owners; creates the unique account ID
         /// </summary>
         /// <param name="customerList">list of customers to be owners</param>        
-        /// <returns>true if was able to open the account</returns>
-        public bool OpenAccount(List<Customer> customerList)
+        /// <returns>account number opened; -1 if did not work</returns>
+        public long OpenAccount(List<Customer> customerList)
         {
             try
             {
@@ -150,8 +150,8 @@ namespace YanivBank.BusinessLogicLayer
         /// opens an account with list of owners; creates the unique account ID
         /// </summary>
         /// <param name="customerList">list of customers to be owners</param>      
-        /// <returns>true if was able to open the account</returns>
-       public  bool OpenAccount(Customer customer)
+        /// <returns>account number opened; -1 if did not work</returns>
+        public long OpenAccount(Customer customer)
         {
 
             try
