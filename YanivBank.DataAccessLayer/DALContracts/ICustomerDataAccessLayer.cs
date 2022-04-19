@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using YanivBank.Entities;
+using Bank.Entities;
 
-namespace YanivBank.DataAccessLayer.DALContracts
+namespace Bank.DataAccessLayer.DALContracts
 {
     /// <summary>
     /// this interface represents customer data access layer CRUD operations

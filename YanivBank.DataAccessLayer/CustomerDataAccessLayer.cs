@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using YanivBank.Entities;
-using YanivBank.Exceptions;
-using YanivBank.DataAccessLayer.DALContracts;
+using Bank.Entities;
+using Bank.Exceptions;
+using Bank.DataAccessLayer.DALContracts;
 
-namespace YanivBank.DataAccessLayer
+namespace Bank.DataAccessLayer
 {
     /// <summary>
     /// repressts DAL for banks custoemrs (just like a database)

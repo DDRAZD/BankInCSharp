@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using YanivBank.Exceptions;
-using YanivBank.Entities;
-using YanivBank.BusinessLogicLayer.BALContracts;
-using YanivBank.BusinessLogicLayer;
-using YanivBank.BusinessLogicLayer.BLContracts;
+using Bank.Exceptions;
+using Bank.Entities;
+using Bank.BusinessLogicLayer.BALContracts;
+using Bank.BusinessLogicLayer;
+using Bank.BusinessLogicLayer.BLContracts;
 
-namespace YanivBank.PresentationLayer
+namespace Bank.PresentationLayer
 {/// <summary>
 /// static class that allows to call the presentation layer for accounts
 /// </summary>

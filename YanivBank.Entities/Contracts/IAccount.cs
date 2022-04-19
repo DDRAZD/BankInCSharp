@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace YanivBank.Entities.Contracts
+namespace Bank.Entities.Contracts
 {
     /// <summary>
     /// represents interface of an account

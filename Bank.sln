@@ -5,15 +5,15 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.PresentationLayer", "Bank.PresentationLayer\Bank.PresentationLayer.csproj", "{0A93B864-8FB8-4248-AE09-A7D2FC2E2EDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanivBank.Entities", "YanivBank.Entities\YanivBank.Entities.csproj", "{627169D5-CC8C-4E13-BF5B-C2BF5ED6A165}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Entities", "YanivBank.Entities\Bank.Entities.csproj", "{627169D5-CC8C-4E13-BF5B-C2BF5ED6A165}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanivBank.DataAccessLayer", "YanivBank.DataAccessLayer\YanivBank.DataAccessLayer.csproj", "{39B75A1F-F68F-47E9-A2AA-A07A3105A8A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.DataAccessLayer", "YanivBank.DataAccessLayer\Bank.DataAccessLayer.csproj", "{39B75A1F-F68F-47E9-A2AA-A07A3105A8A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanivBank.BusinessLogicLayer", "YanivBank.BusinessLogicLayer\YanivBank.BusinessLogicLayer.csproj", "{B404A94F-0654-4C5F-A2C0-59CAB2AF6912}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.BusinessLogicLayer", "YanivBank.BusinessLogicLayer\Bank.BusinessLogicLayer.csproj", "{B404A94F-0654-4C5F-A2C0-59CAB2AF6912}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanivBank.Configuration", "YanivBank.Configuration\YanivBank.Configuration.csproj", "{EB01BBC8-E3AA-4898-A143-2FA643008BFE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Configuration", "YanivBank.Configuration\Bank.Configuration.csproj", "{EB01BBC8-E3AA-4898-A143-2FA643008BFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanivBank.Exceptions", "YanivBank.Exceptions\YanivBank.Exceptions.csproj", "{C7096CCE-F964-4F3B-BC66-15911CDA8223}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Exceptions", "YanivBank.Exceptions\Bank.Exceptions.csproj", "{C7096CCE-F964-4F3B-BC66-15911CDA8223}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -50,9 +50,9 @@
     <Compile Include="Transfers.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\YanivBank.Exceptions\YanivBank.Exceptions.csproj">
+    <ProjectReference Include="..\YanivBank.Exceptions\Bank.Exceptions.csproj">
       <Project>{c7096cce-f964-4f3b-bc66-15911cda8223}</Project>
-      <Name>YanivBank.Exceptions</Name>
+      <Name>Bank.Exceptions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

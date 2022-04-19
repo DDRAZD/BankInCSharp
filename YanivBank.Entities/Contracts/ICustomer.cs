@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace YanivBank.Entities.Contracts
+namespace Bank.Entities.Contracts
 {
     /// <summary>
     /// represents interface of customer

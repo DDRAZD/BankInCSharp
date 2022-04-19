@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using YanivBank.Entities;
+using Bank.Entities;
 
 
-namespace YanivBank.BusinessLogicLayer.BLContracts
+namespace Bank.BusinessLogicLayer.BLContracts
 {
     /// <summary>
     /// interface that represents customer in Business Logic Layer

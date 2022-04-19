@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using YanivBank.Entities.Contracts;
-using YanivBank.Exceptions;
+using Bank.Entities.Contracts;
+using Bank.Exceptions;
 
 
-namespace YanivBank.Entities
+namespace Bank.Entities
 {/// <summary>
 /// accounts class
 /// </summary>

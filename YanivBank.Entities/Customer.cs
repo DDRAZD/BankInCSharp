@@ -1,9 +1,9 @@
 ﻿using System;
-using YanivBank.Entities.Contracts;
-using YanivBank.Exceptions;
+using Bank.Entities.Contracts;
+using Bank.Exceptions;
 
 
-namespace YanivBank.Entities
+namespace Bank.Entities
 {
 
     /// <summary>

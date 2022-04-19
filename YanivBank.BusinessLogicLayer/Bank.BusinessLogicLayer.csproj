@@ -48,21 +48,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\YanivBank.Configuration\YanivBank.Configuration.csproj">
+    <ProjectReference Include="..\YanivBank.Configuration\Bank.Configuration.csproj">
       <Project>{eb01bbc8-e3aa-4898-a143-2fa643008bfe}</Project>
-      <Name>YanivBank.Configuration</Name>
+      <Name>Bank.Configuration</Name>
     </ProjectReference>
-    <ProjectReference Include="..\YanivBank.DataAccessLayer\YanivBank.DataAccessLayer.csproj">
+    <ProjectReference Include="..\YanivBank.DataAccessLayer\Bank.DataAccessLayer.csproj">
       <Project>{39b75a1f-f68f-47e9-a2aa-a07a3105a8a0}</Project>
-      <Name>YanivBank.DataAccessLayer</Name>
+      <Name>Bank.DataAccessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\YanivBank.Entities\YanivBank.Entities.csproj">
+    <ProjectReference Include="..\YanivBank.Entities\Bank.Entities.csproj">
       <Project>{627169d5-cc8c-4e13-bf5b-c2bf5ed6a165}</Project>
-      <Name>YanivBank.Entities</Name>
+      <Name>Bank.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\YanivBank.Exceptions\YanivBank.Exceptions.csproj">
+    <ProjectReference Include="..\YanivBank.Exceptions\Bank.Exceptions.csproj">
       <Project>{c7096cce-f964-4f3b-bc66-15911cda8223}</Project>
-      <Name>YanivBank.Exceptions</Name>
+      <Name>Bank.Exceptions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

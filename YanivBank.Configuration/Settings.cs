@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace YanivBank.Configuration
+namespace Bank.Configuration
 {
     /// <summary>
     /// project level configruation seetings

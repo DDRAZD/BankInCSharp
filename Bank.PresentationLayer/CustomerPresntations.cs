@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using YanivBank.Entities;
-using YanivBank.Exceptions;
-using YanivBank.BusinessLogicLayer;
-using YanivBank.BusinessLogicLayer.BLContracts;
+using Bank.Entities;
+using Bank.Exceptions;
+using Bank.BusinessLogicLayer;
+using Bank.BusinessLogicLayer.BLContracts;
 
-namespace YanivBank.PresentationLayer
+namespace Bank.PresentationLayer
 {
     /// <summary>
     /// static class that represents the customer presentation; no need to instanciate it as static

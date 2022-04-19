@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using YanivBank.Exceptions;
-using YanivBank.Entities;
-using YanivBank.BusinessLogicLayer.BALContracts;
-using YanivBank.DataAccessLayer.DALContracts;
-using YanivBank.DataAccessLayer;
+using Bank.Exceptions;
+using Bank.Entities;
+using Bank.BusinessLogicLayer.BALContracts;
+using Bank.DataAccessLayer.DALContracts;
+using Bank.DataAccessLayer;
 
 
-namespace YanivBank.BusinessLogicLayer
+namespace Bank.BusinessLogicLayer
 {
     /// <summary>
     /// this is the business logic layer for accounts
@@ -238,7 +238,7 @@ namespace YanivBank.BusinessLogicLayer
                 List<Accounts> allAccounts = AccountDataAccessLayer.GetACcounts();
 
                 long maxAccountCode = 0;
-                long accountIDtoUse = YanivBank.Configuration.Settings.BasicAccountNumber;
+                long accountIDtoUse = Bank.Configuration.Settings.BasicAccountNumber;
 
                 if(allAccounts != null)
                 {
@@ -255,7 +255,7 @@ namespace YanivBank.BusinessLogicLayer
                     }
                     else
                     {
-                        accountIDtoUse = YanivBank.Configuration.Settings.BasicAccountNumber + 1;
+                        accountIDtoUse = Bank.Configuration.Settings.BasicAccountNumber + 1;
                     }
                                 
                 }

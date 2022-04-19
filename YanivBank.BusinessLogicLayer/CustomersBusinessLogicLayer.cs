@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using YanivBank.BusinessLogicLayer.BLContracts;
-using YanivBank.DataAccessLayer.DALContracts;
-using YanivBank.DataAccessLayer;
-using YanivBank.Entities;
-using YanivBank.Exceptions;
+using Bank.BusinessLogicLayer.BLContracts;
+using Bank.DataAccessLayer.DALContracts;
+using Bank.DataAccessLayer;
+using Bank.Entities;
+using Bank.Exceptions;
 
-namespace YanivBank.BusinessLogicLayer
+namespace Bank.BusinessLogicLayer
 {
     /// <summary>
     /// represents customer business logic
@@ -119,7 +119,7 @@ namespace YanivBank.BusinessLogicLayer
                 }
                 else
                 {
-                    customer.CustomerCode = YanivBank.Configuration.Settings.BaseCustomerNo + 1;
+                    customer.CustomerCode = Bank.Configuration.Settings.BaseCustomerNo + 1;
                 }
                 
                 //invoke DAL

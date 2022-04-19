@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using YanivBank.Exceptions;
-using YanivBank.Entities;
-using YanivBank.DataAccessLayer.DALContracts;
+using Bank.Exceptions;
+using Bank.Entities;
+using Bank.DataAccessLayer.DALContracts;
 
-namespace YanivBank.DataAccessLayer
+namespace Bank.DataAccessLayer
 {
     /// <summary>
     /// this class is the DAL for accounts and will interact with the DB or a mock DB

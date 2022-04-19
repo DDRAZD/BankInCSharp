@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using YanivBank.Exceptions;
-using YanivBank.Entities;
+using Bank.Exceptions;
+using Bank.Entities;
 
 
 
 
-namespace YanivBank.BusinessLogicLayer.BALContracts
+namespace Bank.BusinessLogicLayer.BALContracts
 {
     /// <summary>
     /// provides the interface for the businsss logic layer for accounts

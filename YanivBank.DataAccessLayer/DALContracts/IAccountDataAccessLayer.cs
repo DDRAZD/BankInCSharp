@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using YanivBank.Exceptions;
-using YanivBank.Entities;
+using Bank.Exceptions;
+using Bank.Entities;
 
 
-namespace YanivBank.DataAccessLayer.DALContracts
+namespace Bank.DataAccessLayer.DALContracts
 {
     /// <summary>
     /// this interface allows to do CRUD operations on accounts data collection; similar to account DB

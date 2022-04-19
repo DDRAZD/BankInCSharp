@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace YanivBank.Exceptions
+namespace Bank.Exceptions
 {
     /// <summary>
     /// this is an exception class; represents error raised in validation

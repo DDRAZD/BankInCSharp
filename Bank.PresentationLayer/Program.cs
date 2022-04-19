@@ -1,4 +1,4 @@
-﻿using YanivBank.PresentationLayer;
+﻿using Bank.PresentationLayer;
 
 class Program
 {
