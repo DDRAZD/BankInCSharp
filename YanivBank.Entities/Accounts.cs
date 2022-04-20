@@ -14,6 +14,7 @@ namespace Bank.Entities
         private List<Customer> _accountOwnerList;
         private long _accountId;
         private decimal _amount;
+        private List<Transfers> _transfers;
         #endregion
 
 
@@ -52,6 +53,11 @@ namespace Bank.Entities
             } 
         }
 
+        public List<Transfers> Transfers
+        {
+            get { return _transfers; }
+            set { _transfers = value; }
+        }
 
 
         #endregion
@@ -64,9 +70,13 @@ namespace Bank.Entities
         /// <param name="Owner">a single owner of an account</param>
         public Accounts(Customer Owner)
         {
-            _accountOwnerList = new List<Customer>();
-            if(Owner != null)
-               _accountOwnerList.Add(Owner);
+            _accountOwnerList = new List<Customer>();//creates the owner list upon constrcutor launch
+            _transfers = new List<Transfers>();//creates the transfer list upon constructor launch
+            if (Owner != null)
+            {
+                _accountOwnerList.Add(Owner);
+
+            }
             else
             {
                 throw new AccountException("account owner cannot be null");
@@ -79,9 +89,10 @@ namespace Bank.Entities
         /// <param name="Owners">list of one or more owners</param>
         public Accounts(List<Customer> Owners)
         {
-            _accountOwnerList= new List<Customer>();
+            _accountOwnerList = new List<Customer>();//creates the owner list upon constrcutor launch
+            _transfers = new List<Transfers>();//creates the transfer list upon constructor launch
 
-            if(Owners != null)
+            if (Owners != null)
             {
                 foreach(Customer Owner in Owners)
                     _accountOwnerList.Add((Customer)Owner);

@@ -63,7 +63,14 @@ namespace Bank.DataAccessLayer.DALContracts
         /// <returns>returns true if removed, if could not remove (e.g. would have left account without owner) returns false</returns>
         bool RemoveOwner(Customer customer, long accountID);
 
-
+        /// <summary>
+        /// returns all the transfers
+        /// </summary>
+        /// <param name="ToPrintAccount">target account ID</param>
+        /// <param name="FromDate">from date</param>
+        /// <param name="ToDate">to date</param>
+        /// <returns>list of all the transfers</returns>
+        List<Transfers> GetStatement(long ToPrintAccount, DateTime FromDate, DateTime ToDate);
 
 
 

@@ -14,6 +14,8 @@ namespace Bank.Entities.Contracts
          long AccountId { get; set; }   
          decimal AccountAmount { get; set; }
 
+        List<Transfers> Transfers { get; set; }
+
         #endregion
 
 

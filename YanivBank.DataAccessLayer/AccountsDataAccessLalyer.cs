@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Bank.Exceptions;
 using Bank.Entities;
 using Bank.DataAccessLayer.DALContracts;
+using Bank.DataAccessLayer;
 
 namespace Bank.DataAccessLayer
 {
@@ -166,6 +167,31 @@ namespace Bank.DataAccessLayer
                 throw;
             }
         }
+
+        /// <summary>
+        /// returns all the transfers
+        /// </summary>
+        /// <param name="ToPrintAccount">target account ID</param>
+        /// <param name="FromDate">from date</param>
+        /// <param name="ToDate">to date</param>
+        /// <returns>list of all the transfers</returns>
+        public List<Transfers> GetStatement(long ToPrintAccount, DateTime FromDate, DateTime ToDate)
+        {
+          
+            List<Transfers> transfersFilterByFrom = new List<Transfers>();
+            List<Transfers> transfersFilterByTo = new List<Transfers>();
+
+
+            List<Accounts> AccountList=  GetACcountsWithCondition(item => item.AccountId == ToPrintAccount);
+
+            transfersFilterByFrom =  AccountList[0].Transfers.FindAll(
+                item=>item.TransferDateTime.CompareTo(FromDate)>=0);
+            transfersFilterByTo = transfersFilterByFrom.FindAll(
+                item => item.TransferDateTime.CompareTo(ToDate) <= 0);
+
+            return transfersFilterByTo;
+        }
+
         /// <summary>
         /// opens an account with list of owners; receives from BAL a unique ID to implement as account ID
         /// </summary>

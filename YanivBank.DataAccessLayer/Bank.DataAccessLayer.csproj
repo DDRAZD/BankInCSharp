@@ -45,10 +45,15 @@
     <Compile Include="CustomerDataAccessLayer.cs" />
     <Compile Include="DALContracts\ICustomerDataAccessLayer.cs" />
     <Compile Include="DALContracts\IAccountDataAccessLayer.cs" />
-    <Compile Include="DALContracts\ITransfer.cs" />
+    <Compile Include="DALContracts\ITransferDataAccessLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransfersDataAccessLayer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\YanivBank.Configuration\Bank.Configuration.csproj">
+      <Project>{eb01bbc8-e3aa-4898-a143-2fa643008bfe}</Project>
+      <Name>Bank.Configuration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\YanivBank.Entities\Bank.Entities.csproj">
       <Project>{627169d5-cc8c-4e13-bf5b-c2bf5ed6a165}</Project>
       <Name>Bank.Entities</Name>

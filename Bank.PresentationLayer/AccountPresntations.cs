@@ -84,7 +84,7 @@ namespace Bank.PresentationLayer
             //instansiates the business logic for accounts
             IAccountBusinessLogicLayer AccountBusinessLogicLayer = new AccountsBusinessLogicLayer();
             ICustomerBusinessLogicLayer CustomerBusinessLogicLayer = new CustomersBusinessLogicLayer();
-            long accountID, customerCode;
+            long customerCode;
 
             Console.WriteLine("please enter your customer code");
             customerCode = long.Parse(Console.ReadLine());
