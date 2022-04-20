@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Bank.Entities;
 using Bank.Exceptions;
 using Bank.DataAccessLayer.DALContracts;
@@ -45,39 +46,37 @@ namespace Bank.DataAccessLayer
         /// <param name="Amount">amount to transfer</param>
         /// <param name="Amount">amount to transfer</param>
         /// <returns>true if worked</returns>
-        public void TransferFunds(long FromAccount, long ToAccount, decimal Amount)
+        public void TransferFunds(long FromAccountID, long ToAccountID, decimal Amount)
         {
             if (Amount < 0)
                 throw new ArgumentException("transfer amount cannot be negative");
 
-            if (FromAccount < Bank.Configuration.Settings.BasicAccountNumber || 
-                ToAccount < Bank.Configuration.Settings.BasicAccountNumber)//account number invalid
+            if (FromAccountID < Bank.Configuration.Settings.BasicAccountNumber ||
+                ToAccountID < Bank.Configuration.Settings.BasicAccountNumber)//account number invalid
                 throw new ArgumentException("One or both accounts numners for transfer is invalid - cannot complete transfer");
 
             //access the accounts themslves, using the account number
-            Transfers transfer = new Transfers() { AccountIDFrom = FromAccount, AccountIDTo = ToAccount, AmountTransfered = Amount, TransferDateTime = DateTime.UtcNow };
+            Transfers transfer = new Transfers() { AccountIDFrom = FromAccountID, AccountIDTo = ToAccountID, AmountTransfered = Amount, TransferDateTime = DateTime.UtcNow };
 
             Transfers.Add(transfer);//adds to the actual transaction database
 
             //updating the accounts; have to create an Account DAL instance 
 
             IAccountDataAccessLayer AccountDataAccessLayer = new AccountsDataAccessLalyer();
+                     
 
-            //  List<Accounts> FromAccountLIst = new List<Accounts>();
+            Accounts FromAccount = AccountDataAccessLayer.GetACcounts().Single(item => item.AccountId == FromAccountID);
 
-            List<Accounts> FromAccountLIst = AccountDataAccessLayer.GetACcountsWithCondition(item => item.AccountId == FromAccount);
-
-            // List<Accounts> ToACcountList = new List<Accounts>();
-
-            List<Accounts> ToACcountList = AccountDataAccessLayer.GetACcountsWithCondition(item => item.AccountId == ToAccount);
+            
+            Accounts ToACcount = AccountDataAccessLayer.GetACcounts().Single(item => item.AccountId == ToAccountID);
 
             //update balances
-            FromAccountLIst[0].AccountAmount = FromAccountLIst[0].AccountAmount - Amount;
-            ToACcountList[0].AccountAmount = ToACcountList[0].AccountAmount + Amount;
+            FromAccount.AccountAmount = FromAccount.AccountAmount - Amount;
+            ToACcount.AccountAmount = ToACcount.AccountAmount + Amount;
 
             //add transaction record to both accounts:
-            FromAccountLIst[0].Transfers.Add(transfer);
-            ToACcountList[0].Transfers.Add(transfer);
+            FromAccount.Transfers.Add(transfer);
+            ToACcount.Transfers.Add(transfer);
 
 
         }
@@ -144,9 +143,10 @@ namespace Bank.DataAccessLayer
 
                 List<Accounts> listOfACcounts = new List<Accounts>();
 
-                listOfACcounts = AccountDataAccessLayer.GetACcountsWithCondition(item => item.AccountId == AccountId);
+                Accounts account;
+                account = AccountDataAccessLayer.GetACcounts().Single(item => item.AccountId == AccountId);
 
-                return listOfACcounts[0].Transfers;
+                return account.Transfers;
 
             }
             catch (Exception)

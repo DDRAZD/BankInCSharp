@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Bank.Exceptions;
 using Bank.Entities;
 using Bank.DataAccessLayer.DALContracts;
@@ -182,9 +183,9 @@ namespace Bank.DataAccessLayer
             List<Transfers> transfersFilterByTo = new List<Transfers>();
 
 
-            List<Accounts> AccountList=  GetACcountsWithCondition(item => item.AccountId == ToPrintAccount);
+            Accounts Account=  GetACcounts().Single(item => item.AccountId == ToPrintAccount);
 
-            transfersFilterByFrom =  AccountList[0].Transfers.FindAll(
+            transfersFilterByFrom = Account.Transfers.FindAll(
                 item=>item.TransferDateTime.CompareTo(FromDate)>=0);
             transfersFilterByTo = transfersFilterByFrom.FindAll(
                 item => item.TransferDateTime.CompareTo(ToDate) <= 0);

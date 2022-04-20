@@ -44,8 +44,10 @@
     <Compile Include="AccountsBusinessLogicLayer.cs" />
     <Compile Include="BALContracts\IAccountBusinessLogicLayer.cs" />
     <Compile Include="BALContracts\ICustomerBusinessLogicLayer.cs" />
+    <Compile Include="BALContracts\ITransfersBusinessLogicLayer.cs" />
     <Compile Include="CustomersBusinessLogicLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransferBusinessLogicLayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YanivBank.Configuration\Bank.Configuration.csproj">
