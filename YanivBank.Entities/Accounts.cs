@@ -121,6 +121,7 @@ namespace Bank.Entities
             account.AccountId = this.AccountId;
             account.AccountAmount = this.AccountAmount;
             account.AccountOwnerList = this.AccountOwnerList;
+            account.Transfers = this.Transfers;
             return account;
         }
 

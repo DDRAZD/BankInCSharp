@@ -1,4 +1,5 @@
 ﻿using Bank.PresentationLayer;
+using System;
 
 class Program
 {
@@ -7,7 +8,7 @@ class Program
     {
         //display title
 
-        System.Console.WriteLine("--------Yaniv's Bank------");
+        System.Console.WriteLine("--------Test Bank------");
         System.Console.WriteLine("Enter User Name And password");
         string userName = null;
         string password = null;
@@ -44,13 +45,10 @@ class Program
                 {
                     case 1: CustomersMenue();break;
                     case 2: AccountsMenu();  break;
-                    case 3://dispaly fund transfer
-                        break;
-                    case 4: //display fund transfer statement
-                        break;
-                    case 5: // display account statement
-                        break;
-                }
+                    case 3: TransfersPresenations.FundTransfer(); break;
+                    case 4: TransfersPresenations.PrintAllTransfers(); break;                        
+                    case 5: TransfersPresenations.PrintAllAccountTransfers(); break;
+                                        }
             
             } while (mainMenuChoice != 0);
         }
@@ -125,4 +123,6 @@ class Program
         } while (AccountMenuChoice != 0);
 
     }
+
+    
 }
